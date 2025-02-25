@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Linux/AWS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light text-dark">
+    
+    <header class="bg-dark text-white text-center py-4">
+        <h1 class="mb-0 fs-4">Projeto Linux/AWS</h1>
+    </header>
+    
+    <div class="container mt-5">
+        <section>
+            <main class="mb-3 p-4 border bg-white">
+                <h2 class="text-dark fs-4">Instâncias Amazon AWS EC2</h2>
+                    <p >Uma instância EC2 é como se fosse uma Virtual Machine (VM) dentro da Amazon AWS, ou seja, é seu servidor na nuvem para rodar sua aplicação/serviço/sistema. Essa instância para funcionar precisa ao menos de: um nome, uma AMI (sistema operacional do servidor), configuração de rede (VPC e security group configurados), e um volumes EBS e seu tipo (é o recurso de armazenamento da Amazon AWS para as instâncias EC2).</p>
+
+                    <h2 class="text-dark fs-4">NGINX</h2>
+                    <p >O NGINX é um software que fornece recursos para os servidores web, sendo eles: carregar páginas web ("subir seu site na internet"), balanceador de carga e proxy reverso. No caso desse projeto, o NGINX foi usado pra subir uma página HTML simples (essa que você está lendo), para acessar página é necessário digitar o IP público desse servidor.</p>
+
+                    <h2 class="text-dark fs-4">Webhooks Discord</h2>
+                    <p >É uma maneira simples de enviar mensagens e notificações personalizadas para seu servidor. Neste projeto foi criado um Shell Script que envia uma mensagem (do formato JSON) usando o webhook do discord de acordo com o funcionamento do NGINX.</p>
+            </main>
+        </section>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<img src="">

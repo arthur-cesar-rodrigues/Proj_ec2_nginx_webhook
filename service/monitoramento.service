@@ -1,0 +1,11 @@
+[Unit]
+Description=Servico de monitoramento de disponibilidade da página NGINX.
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=40
+ExecStart=/usr/bin/monitoramento.sh
+
+[Install]
+WantedBy=multi-user.target
