@@ -307,7 +307,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 > [!IMPORTANT]
 > Este código está dentro da pasta script deste repositório.
 
-<img src="./images/script/script1.png">
+<img src="./images/script/script.png">
 
 * `#!/bin/bash` - informa ao linux que o arquivo é um shell script; 
 
