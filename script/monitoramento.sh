@@ -3,8 +3,7 @@
 sudo curl -s localhost > /var/log/conexao.log
 
 webhook="(insira aqui a url do seu webhook)"
-data=$(TZ=America/Sao_Paulo date +"%d/%m/%Y - %T")
-
+data=$(sudo date +%d/%m/%Y" - "%H:%M:%S)
 
 if sudo grep -q "<!DOC" /var/log/conexao.log 
 then
