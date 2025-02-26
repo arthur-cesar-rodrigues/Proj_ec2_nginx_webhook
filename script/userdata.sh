@@ -54,7 +54,7 @@ sudo cat <<EOF > /usr/bin/monitoramento.sh
 
 sudo curl -s localhost > /var/log/conexao.log
 
-webhook="(a url do seu webhook aqui)"
+webhook="(insira aqui a url do seu webhook)"
 data=\$(sudo date +%d/%m/%Y" - "%H:%M:%S)
 
 if sudo grep -q "<!DOC" /var/log/conexao.log 
