@@ -35,7 +35,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 
 ### 2. Criando e configurando um Security Group
 > [!NOTE]
-> O security group define o tráfego dos nossos recursos AWS (quem e quais conexões e portas, similiar a um firewall).
+> O security group define o tráfego dos nossos recursos AWS (quem e quais conexões e portas são permitidas, similiar a um firewall).
 
 2.1 Procurar e selecionar ***EC2*** no console da AWS.
 
@@ -61,9 +61,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 
 <img src="./images/sg/sg6.png">
 
-2.7 Selecionar: ***Inbound rules****; ***Edit Inbound Rules***.
-> [!IMPORTANT]
-> Tanto inbound quanto outbound rules não aceitam caracteres especiais (ex: "ç") no campo descrição das regras.
+2.7 Selecionar: ***Inbound rules***; ***Edit Inbound Rules***.
 
 <img src="./images/sg/sg7.png">
 
@@ -79,7 +77,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 
 2.10 Selecionar ***Add rule***, e inserir: Type: HTTP; Port: 80; Source: Anywhere-IPv4; Description: a descrição da sua regra HTTP.
 > [!NOTE]
-> Essa regra de entrada vai permitir a conexão HTTP de qualquer máquina com a instância EC2 Ubuntu que criarmos pelo VSCode (isso possibilitará o acesso de outras máquina a nossa página no NGINX).
+> Essa regra de entrada vai permitir a conexão HTTP de qualquer máquina com a instância EC2 Ubuntu que criarmos pelo VSCode (isso possibilitará o acesso de outras máquinas a nossa página no NGINX).
 
 <img src="./images/sg/sg10.png">
 
@@ -135,7 +133,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 
 4.2 Selecionar ***Launch Instances***.
 > [!WARNING]
-> As configurações de: AMI (Sistema Operacional) e sua versão; tipo de instância; tamanho do volume EBS (armazenamento) e seu tipo  foram escolhidas as opções "Free Tier eligible" (são gratuitas). Porém o uso da instância ao longo do tempo é cobrado, após a prática do projeto a instancia foi deletada ("Terminate Instance").
+> As configurações de: AMI (Sistema Operacional) e sua versão; tipo de instância; tamanho do volume EBS (armazenamento) e seu tipo  foram escolhidas as opções "Free Tier eligible" (são gratuitas). Porém o uso da instância ao longo do tempo é cobrado, após a prática do projeto a instância foi deletada ("Terminate Instance").
 
 <img src="./images/inst/inst2.png">
 
@@ -167,7 +165,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 
 4.11 Inserindo Scripts no User Data (OPCIONAL)
 > [!NOTE]
-> O user data é um campo que fica dentro da página de criação de instâncias EC2 que permite inserir scripts para automatização que serão executados quando iniciarmos na instância que subiremos pela primeira vez.
+> O user data é um campo que fica dentro da página de criação de instâncias EC2 que permite inserir scripts para automatização que serão executados quando iniciarmos a instância que subiremos pela primeira vez.
     
 - 4.11.1 Selecionar ***Advanced Details***.
         
@@ -176,7 +174,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 - 4.11.2 Selecionar ***Choose file*** (e selecionar seu script de automatização) ou colar na caixa de texto o script.
         
 > [!IMPORTANT]
-> O meu script de automatização do user data, está neste repósitório, na pasta script (_userdata.sh_), caso você use este script basta criar um webhook (etapa 9) e colar sua url no script.
+> O script de automatização utilizado no projeto, está neste repósitório, na pasta script (_userdata.sh_), caso use este script basta criar um webhook (etapa 9) e colar sua url no script.
         
 <img src="./images/userdata/userdata2.png">
 
@@ -246,13 +244,15 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 
 7.7 Executar comando: `sudo vi /var/www/projeto_linux.com/index.html`; e inserir o código do seu HTML e salvar.
 > [!NOTE]
-> Criando a página do site, o meu arquivo index.html (esse arquivo esta na pasta html deste repositório).
+> Criando a página do site, o arquivo index.html utilizado no projeto está neste repositório (pasta html).
 
 <img src="./images/config/confign5.png">
 
 7.8 Executar comando: `sudo systemctl restart nginx.service` (reniciando o NGINX).
 > [!NOTE]
 > A partir de agora o NGINX vai subir nossa página HTML personalizada.
+
+7.9 Executar comando: `sudo systemctl enable nginx.service` (ativando o Nginx para iniciar junto do boot do servidor).
 
 ### 8. Acessando nossa página pelo navegador
 
@@ -392,7 +392,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 <img src="./images/teste/teste5.png">
 
 ### #Conclusão
-O projeto teve como objetivo de criar uma instância na nuvem (AWS) e subir um site nela com o Nginx, com o uso de webhooks  para o monitoramento da página html usando um script shell. Podemos concluir que este projeto é um pontapé inicial e proporciona de forma mais simples o funcionamento de serviços/aplicações na nuvem e seus recursos.
+O projeto teve como objetivo de criar uma instância na nuvem (AWS) e subir um site nela com o Nginx, com o uso de webhooks  para o monitoramento da página HTML usando um script shell. Podemos concluir que este projeto é um pontapé inicial e proporciona de forma mais simples o funcionamento de serviços/aplicações na nuvem e seus recursos.
 
 
 
