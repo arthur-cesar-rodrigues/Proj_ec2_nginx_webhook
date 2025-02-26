@@ -54,7 +54,7 @@ sudo cat <<EOF > /usr/bin/monitoramento.sh
 
 sudo curl -s localhost > /var/log/conexao.log
 
-webhook="https://discord.com/api/webhooks/1343433089837170709/l0P39edxofzxcOqt9nzCK_NgEGMIXhdUbLuwMmtmyVd9sf3pWNqkCgfiYwueNBvagM_o"
+webhook="(a url do seu webhook aqui)"
 data=\$(sudo date +%d/%m/%Y" - "%H:%M:%S)
 
 if sudo grep -q "<!DOC" /var/log/conexao.log 
