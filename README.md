@@ -342,6 +342,10 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 
 <img src="./images/script/script2.png">
 
+10.4 Executar comando: `sudo timedatectl set-timezone America/Sao_Paulo`
+> [!IMPORTANT]
+> Este comando define o fuso horário que minha instância e o comando date vai trabalhar.
+
 ### 11. Criando e configurando um serviço Systemd
 > [!IMPORTANT]
 > O serviço Systemd que criaremos tem como objetivo automatizar o script "monitoramento.sh" (o script será executado automaticamente).

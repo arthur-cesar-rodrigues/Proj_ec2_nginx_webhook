@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Atualizando os pacotes do Ubuntu
-sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 
 # Instalando o Nginx
 sudo apt-get install nginx -y
@@ -72,6 +72,9 @@ EOF
 
 # Concedendo permissão de execução do script monitoramento.sh para todos os usuários
 sudo chmod a+x /usr/bin/monitoramento.sh
+
+# Definindo o fuso horário do comando date
+sudo timedatectl set-timezone America/Sao_Paulo
 
 # Criando um serviço que vai executar o script monitoramento.sh automaticamente (a cada 40 segundos)
 sudo cat <<EOF > /etc/systemd/system/monitoramento.service
