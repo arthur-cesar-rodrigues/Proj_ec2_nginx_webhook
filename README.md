@@ -8,7 +8,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 > É necessário possuir uma conta na Amazon AWS e no Discord, ter noções básicas de HTML e possuir o VSCODE instalado na máquina.
 
 - Sistema Operacional da máquina utilizado durante o projeto: Windows 11.
-- Recursos Amazon AWS: VPC, Security Goup, Key Pair, Instance EC2 (Ubuntu Server 24.04, t2.micro).
+- Recursos Amazon AWS: VPC, Security Group, Key Pair, Instance EC2 (Ubuntu Server 24.04, t2.micro).
 - Webhook Discord.
 - VSCode (GitBash - terminal).
 
