@@ -163,15 +163,15 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 
 <img src="./images/inst/inst10.png">
 
-4.11 Inserindo Scripts no User Data (OPCIONAL)
+4.10 Inserindo Scripts no User Data (OPCIONAL)
 > [!NOTE]
 > O user data é um campo que fica dentro da página de criação de instâncias EC2 que permite inserir scripts para automatização que serão executados quando iniciarmos a instância que subiremos pela primeira vez.
     
-- 4.11.1 Selecionar ***Advanced Details***.
+- 4.10.1 Selecionar ***Advanced Details***.
         
 <img src="./images/userdata/userdata1.png">
     
-- 4.11.2 Selecionar ***Choose file*** (e selecionar seu script de automatização) ou colar na caixa de texto o script.
+- 4.10.2 Selecionar ***Choose file*** (e selecionar seu script de automatização) ou colar na caixa de texto o script.
         
 > [!IMPORTANT]
 > O script de automatização utilizado no projeto, está neste repósitório, na pasta script (_userdata.sh_), caso use este script basta criar um webhook (etapa 9) e colar sua url no script.
