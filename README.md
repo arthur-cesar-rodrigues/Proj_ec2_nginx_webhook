@@ -143,35 +143,35 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 <img src="./images/inst/inst4.png">
 <img src="./images/inst/inst5.png">
 
-4.3 Selecionar ***Edit*** (Network settings).
+4.4 Selecionar ***Edit*** (Network settings).
 
 <img src="./images/inst/inst6.png">
 
-4.6 Selecionar: VPC: VPC criada; Subnet: qualquer subnet pública; Auto-assign public IP: Enable (a intância vai possuir um IP público e isso vai permitir que qualquer ip consiga acessar nossa página NGINX).
+4.5 Selecionar: VPC: VPC criada; Subnet: qualquer subnet pública; Auto-assign public IP: Enable (a intância vai possuir um IP público e isso vai permitir que qualquer ip consiga acessar nossa página NGINX).
 
 <img src="./images/inst/inst7.png">
 
-4.7 Selecionar ***Select existing security group***.
+4.6 Selecionar ***Select existing security group***.
 
 <img src="./images/inst/inst8.png">
 
-4.8 Selecionar o security group criado anteriormente (Commom security groups).
+4.7 Selecionar o security group criado anteriormente (Commom security groups).
 
 <img src="./images/inst/inst9.png">
 
-4.9 Inserir o tamanho em GB do armazanemento do seu servidor (1x) e tipo dele (gp3).
+4.8 Inserir o tamanho em GB do armazanemento do seu servidor (1x) e tipo dele (gp3).
 
 <img src="./images/inst/inst10.png">
 
-4.10 Inserindo Scripts no User Data (OPCIONAL)
+4.9 Inserindo Scripts no User Data (OPCIONAL)
 > [!NOTE]
 > O user data é um campo que fica dentro da página de criação de instâncias EC2 que permite inserir scripts para automatização que serão executados quando iniciarmos a instância que subiremos pela primeira vez.
     
-- 4.10.1 Selecionar ***Advanced Details***.
+- 4.9.1 Selecionar ***Advanced Details***.
         
 <img src="./images/userdata/userdata1.png">
     
-- 4.10.2 Selecionar ***Choose file*** (e selecionar seu script de automatização) ou colar na caixa de texto o script.
+- 4.9.2 Selecionar ***Choose file*** (e selecionar seu script de automatização) ou colar na caixa de texto o script.
         
 > [!IMPORTANT]
 > O script de automatização utilizado no projeto, está neste repósitório, na pasta script (_userdata.sh_), caso use este script basta criar um webhook (etapa 9) e colar sua url no script.
@@ -181,7 +181,7 @@ Criar uma VPC e uma instância EC2 Ubuntu, configurar e subir uma página simple
 > [!WARNING]
 > Quem seguir esta etapa pode pular as etapas: 6, 7, 10, 11.
 
-4.11 Selecionar ***Launch instance***.
+4.10 Selecionar ***Launch instance***.
 
 <img src="./images/inst/inst11.png">
 
